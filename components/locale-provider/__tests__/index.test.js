@@ -76,6 +76,7 @@ import viVN from '../vi_VN';
 import zhCN from '../zh_CN';
 import zhHK from '../zh_HK';
 import zhTW from '../zh_TW';
+import urPK from '../ur_PK';
 
 const locales = [
   azAZ,
@@ -138,6 +139,7 @@ const locales = [
   zhCN,
   zhHK,
   zhTW,
+  urPK,
 ];
 
 const { Option } = Select;
@@ -229,9 +231,10 @@ describe('Locale Provider', () => {
           <ModalDemo />
         </LocaleProvider>,
       );
-      const currentConfirmNode = document.querySelectorAll('.ant-modal-confirm')[
-        document.querySelectorAll('.ant-modal-confirm').length - 1
-      ];
+      const currentConfirmNode =
+        document.querySelectorAll('.ant-modal-confirm')[
+          document.querySelectorAll('.ant-modal-confirm').length - 1
+        ];
       let cancelButtonText = currentConfirmNode.querySelectorAll(
         '.ant-btn:not(.ant-btn-primary) span',
       )[0].innerHTML;
